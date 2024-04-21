@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MintWallet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appName">MintWallet</string>
+    <string name="logo_description_pt">logo app carteira verde</string>
+
+    <string name="welcome_step1_image_description">pessoa analisando graficos</string>
+    <string name="welcome_step1_title">Uma maneira fácil de gerenciar suas finanças</string>
+    <string name="welcome_step1_decription">Gerencie suas finanças de forma simples e eficiente. Nosso app oferece recursos avançados para controle de gastos, planejamento financeiro e muito mais.</string>
+
+    <string name="welcome_step2_image_description">pessoa analisando graficos</string>
+    <string name="welcome_step2_title">Defina seus objetivos financeiros</string>
+    <string name="welcome_step2_decription">Defina metas financeiras para guiar suas decisões e realizar sonhos, como viajar pelo mundo com a pessoa que ama.</string>
+
+    <string name="welcome_step3_image_description">pessoa analisando graficos</string>
+    <string name="welcome_step3_title">Uma nova experiência de investimento</string>
+    <string name="welcome_step3_decription">Comece ainda hoje a explorar novas experiências de investimento para expandir seu portfólio e alcançar seus objetivos financeiros.</string>
+
+    <string name="next">Próximo</string>
+    <string name="skip">Pular</string>
+</resources>

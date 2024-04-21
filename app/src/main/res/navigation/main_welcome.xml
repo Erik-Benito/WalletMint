@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_welcome"
+    app:startDestination="@id/main_welcome_frag">
+    <fragment
+        android:id="@+id/main_welcome_frag"
+        android:name="com.senac.mintwallet.welcome.Main"
+        android:label="stepOne"
+        tools:layout="@layout/fragment_welcome_main"
+        >
+    </fragment>
+</navigation>
