@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signin"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.senac.mintwallet.signin.Login"
+        android:label="fragment_signin_login"
+        tools:layout="@layout/fragment_signin_login" >
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_login_to_resetPassword"
+            app:destination="@id/resetPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.senac.mintwallet.signin.Register"
+        android:label="fragment_signin_register"
+        tools:layout="@layout/fragment_signin_register" >
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPassword"
+        android:name="com.senac.mintwallet.signin.ResetPassword"
+        android:label="fragment_signin_reset_password"
+        tools:layout="@layout/fragment_signin_reset_password" >
+        <action
+            android:id="@+id/action_resetPassword_to_login"
+            app:destination="@id/login" />
+    </fragment>
+</navigation>

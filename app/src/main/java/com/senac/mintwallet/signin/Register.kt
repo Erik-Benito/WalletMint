@@ -1,23 +1,17 @@
-package com.senac.mintwallet
+package com.senac.mintwallet.signin
 
 import android.content.res.Configuration
-import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.senac.mintwallet.databinding.FragmentSplashBinding
+import com.senac.mintwallet.R
+import com.senac.mintwallet.databinding.FragmentSigninRegisterBinding
 
-
-class Splash : Fragment() {
-    private var _binding: FragmentSplashBinding? = null
+class Register: Fragment() {
+    private var _binding: FragmentSigninRegisterBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,7 +19,7 @@ class Splash : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSplashBinding.inflate(inflater,container,false)
+        _binding = FragmentSigninRegisterBinding.inflate(inflater,container,false)
         return binding.root
     }
 
@@ -35,18 +29,22 @@ class Splash : Fragment() {
         val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
         val isNightMode = currentNightMode == Configuration.UI_MODE_NIGHT_YES
 
-        requireActivity().window.statusBarColor = resources.getColor( if(isNightMode) R.color.black else R.color.white );
-        requireActivity().window.navigationBarColor = resources.getColor( if(isNightMode) R.color.black else R.color.white );
-
-        navigateToNextScreen()
-    }
-
-    private fun navigateToNextScreen() {
-        findNavController().navigate(R.id.action_splash_to_main_welcome)
+        requireActivity().window.statusBarColor = resources.getColor(if(isNightMode) R.color.black else R.color.white);
+        initListeners()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+    private fun initListeners() {
+        binding.loginLink.setOnClickListener {
+            findNavController().navigate(R.id.action_register_to_login)
+        }
+        binding.back.setOnClickListener {
+            findNavController().popBackStack()
+        }
+    }
+
 }

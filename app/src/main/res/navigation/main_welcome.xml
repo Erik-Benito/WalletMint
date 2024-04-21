@@ -10,5 +10,9 @@
         android:label="stepOne"
         tools:layout="@layout/fragment_welcome_main"
         >
+        <action
+            android:id="@+id/action_main_welcome_frag_to_signin"
+            app:destination="@id/signin" />
     </fragment>
+    <include app:graph="@navigation/main_signin" />
 </navigation>

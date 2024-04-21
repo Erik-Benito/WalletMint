@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.senac.mintwallet.R
@@ -57,11 +58,11 @@ class Main: Fragment()  {
             if (getItem(0) < 2) {
                 binding.slideViewPager.setCurrentItem(getItem(1), true)
             } else {
-                //Todo
+                findNavController().navigate(R.id.action_main_welcome_frag_to_signin)
             }
         }
         binding.skipButton.setOnClickListener {
-            //Todo
+            findNavController().navigate(R.id.action_main_welcome_frag_to_signin)
         }
 
         viewPagerAdapter = this.context?.let { ViewPagerAdapter(it) }

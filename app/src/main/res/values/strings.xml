@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">MintWallet</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="appName">MintWallet</string>
     <string name="logo_description_pt">logo app carteira verde</string>
@@ -19,4 +18,31 @@
 
     <string name="next">Próximo</string>
     <string name="skip">Pular</string>
+    <string name="login">Entrar</string>
+    <string name="signin_login_title">Entre com sua conta</string>
+    <string name="signin_login_welcome">Bem-vindo!</string>
+
+    <string name="email">Email</string>
+    <string name="required">Obrigatório</string>
+    <string name="password">Senha</string>
+    <string name="signin_login_reset_pwd">Esqueceu a senha?</string>
+    <string name="signin_login_other_title">Entre com</string>
+    <string name="signin_login_register_tile">Não possui conta ?</string>
+    <string name="signin_login_register_link"> Cadastrar-se</string>
+    <string name="signin_register_title">Cadastrar-se</string>
+    <string name="signin_register_description">Crie sua conta</string>
+    <string name="signin_register_login_tile">Já possui conta?</string>
+    <string name="signin_register_login_link"> Entrar</string>
+    <string name="full_name">Nome Completo</string>
+    <string name="confirm_password">Confirme sua senha</string>
+    <string name="signin_register_resetpwd_title">Esqueceu sua senha?</string>
+    <string name="signin_register_resetpwd_description">Enviaremos um e-mail com instrućões de como redefinir sua senha.</string>
+    <string name="signin_reset_imagem_icon_desc">flecha indicando općão de retornar a pagina anterior</string>
+    <string name="register">Cadastrar-se</string>
+    <string name="send">enviar</string>
+    <string name="Done">Feito</string>
+    <string name="check_email">Verifique seu e-mail</string>
+    <string name="icon_mensagem">icone de mensagem\n</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
 </resources>

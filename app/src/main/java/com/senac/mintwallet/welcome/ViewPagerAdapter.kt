@@ -56,6 +56,6 @@ class ViewPagerAdapter(private var context: Context) :PagerAdapter() {
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        container.removeView(`object` as View?)
+        container.removeView(`object` as View)
     }
 }
