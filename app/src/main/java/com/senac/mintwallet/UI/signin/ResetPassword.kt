@@ -1,21 +1,22 @@
-package com.senac.mintwallet.signin
+package com.senac.mintwallet.UI.signin
 
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.firebase.auth.FirebaseAuth
+import com.senac.mintwallet.UI.CustomToast.CustomToast
 import com.senac.mintwallet.R
 import com.senac.mintwallet.databinding.FragmentSigninResetPasswordBinding
 
 class ResetPassword: Fragment() {
     private var _binding: FragmentSigninResetPasswordBinding? = null
     private val binding get() = _binding!!
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,11 +29,7 @@ class ResetPassword: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-        val isNightMode = currentNightMode == Configuration.UI_MODE_NIGHT_YES
-
-        requireActivity().window.statusBarColor = resources.getColor(if(isNightMode) R.color.black else R.color.white);
+        auth = FirebaseAuth.getInstance()
         initListeners()
     }
 
@@ -46,6 +43,8 @@ class ResetPassword: Fragment() {
             findNavController().popBackStack()
         }
         binding.submitButton.setOnClickListener {
+            sendEmail()
+
             val view: View = layoutInflater.inflate(R.layout.dialog_ok, null)
             val dialog = BottomSheetDialog(binding.root.context)
             dialog.setContentView(view)
@@ -57,4 +56,15 @@ class ResetPassword: Fragment() {
             }
         }
    }
+
+    private fun sendEmail() {
+        val email = binding.emailEditText.text.toString().trim()
+
+        auth.sendPasswordResetEmail(email)
+            .addOnCompleteListener { task ->
+                if (!task.isSuccessful)  {
+                    CustomToast.showToast(this.requireContext(), "Falha ao enviar email de redefinição.", false)
+                }
+            }
+    }
 }

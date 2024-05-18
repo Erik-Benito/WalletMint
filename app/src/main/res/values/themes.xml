@@ -1,9 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.MintWallet" parent="Theme.Material3.DayNight.NoActionBar" />
+
     <style name="Theme.MintWallet" parent="Base.Theme.MintWallet" >
         <item name="android:windowLightStatusBar">true</item>
         <item name="colorPrimary">@color/green</item>
         <item name="colorOnContainer">@color/active</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Custom" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/green</item>
+        <item name="hintTextColor">@color/green</item>
+        <item name="android:textColor">@color/green</item>
     </style>
 
     <style name="text">

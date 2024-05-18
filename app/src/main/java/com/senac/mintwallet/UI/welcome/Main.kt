@@ -1,4 +1,4 @@
-package com.senac.mintwallet.welcome
+package com.senac.mintwallet.UI.welcome
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -52,7 +52,6 @@ class Main: Fragment()  {
         val isNightMode = currentNightMode == Configuration.UI_MODE_NIGHT_YES
 
         requireActivity().window.statusBarColor = resources.getColor(R.color.green);
-        requireActivity().window.navigationBarColor = resources.getColor(if(isNightMode) R.color.black else R.color.white);
 
         binding.nextButton.setOnClickListener {
             if (getItem(0) < 2) {

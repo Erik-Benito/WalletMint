@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splash"
-        android:name="com.senac.mintwallet.Splash"
+        android:name="com.senac.mintwallet.UI.Splash"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action

@@ -45,4 +45,11 @@
     <string name="icon_mensagem">icone de mensagem\n</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
+
+    <string name="id_web_client">290619583090-f6v586a51ico6eed5vh8voshbercof22.apps.googleusercontent.com</string>
+
+
+    <string name="facebook_app_id">1096818451429750</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">39232bbc3d586647e58b739e7a6de7d0</string>
 </resources>

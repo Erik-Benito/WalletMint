@@ -6,7 +6,7 @@
     app:startDestination="@id/main_welcome_frag">
     <fragment
         android:id="@+id/main_welcome_frag"
-        android:name="com.senac.mintwallet.welcome.Main"
+        android:name="com.senac.mintwallet.UI.welcome.Main"
         android:label="stepOne"
         tools:layout="@layout/fragment_welcome_main"
         >

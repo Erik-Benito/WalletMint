@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.Firebase
+import com.google.firebase.FirebaseApp
 import com.senac.mintwallet.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

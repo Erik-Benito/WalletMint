@@ -1,4 +1,4 @@
-package com.senac.mintwallet.welcome
+package com.senac.mintwallet.UI.welcome
 
 import android.content.Context
 import android.view.LayoutInflater

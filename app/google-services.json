@@ -12,7 +12,20 @@
           "package_name": "com.senac.mintwallet"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "290619583090-3f1420ioggj7tt6sn8e2okuhf3pvsk48.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.senac.mintwallet",
+            "certificate_hash": "03661ee113d2800c0feddfec99a4e5b90bc98f84"
+          }
+        },
+        {
+          "client_id": "290619583090-f6v586a51ico6eed5vh8voshbercof22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAZhpiUhixhuPoNDcLLxqd7SJ_l5VL94sA"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290619583090-f6v586a51ico6eed5vh8voshbercof22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

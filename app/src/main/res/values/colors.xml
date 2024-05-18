@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--  Neutral  -->
     <color name="green">#34B67F</color>
-    <color name="active">#D9D9D9</color>
+    <color name="active">#9F9F9F</color>
     <color name="inactive">#7A7A7A</color>
 
 
     <!-- Light Theme  -->
     <color name="white">#FFFFFFFF</color>
-
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true" tools:ignore="PrivateResource">#9F9F9F</color>
     <!-- Dark Theme  -->
     <color name="black">#1A1C1E</color>
-
 
 </resources>

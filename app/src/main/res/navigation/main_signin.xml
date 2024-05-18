@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/login"
-        android:name="com.senac.mintwallet.signin.Login"
+        android:name="com.senac.mintwallet.UI.signin.Login"
         android:label="fragment_signin_login"
         tools:layout="@layout/fragment_signin_login" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/register"
-        android:name="com.senac.mintwallet.signin.Register"
+        android:name="com.senac.mintwallet.UI.signin.Register"
         android:label="fragment_signin_register"
         tools:layout="@layout/fragment_signin_register" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/resetPassword"
-        android:name="com.senac.mintwallet.signin.ResetPassword"
+        android:name="com.senac.mintwallet.UI.signin.ResetPassword"
         android:label="fragment_signin_reset_password"
         tools:layout="@layout/fragment_signin_reset_password" >
         <action
