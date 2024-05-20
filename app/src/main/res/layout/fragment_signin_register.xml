@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/background"
     android:padding="25dp"
     tools:context=".UI.signin.Register"
     >
@@ -27,7 +26,6 @@
         android:text="@string/signin_register_title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back"
-        style="@style/text"
         android:fontFamily="@font/jakarta_bold"
         android:textSize="40sp"
         android:maxWidth="280sp"
@@ -40,20 +38,17 @@
         android:text="@string/signin_register_description"
         app:layout_constraintStart_toStartOf="@+id/title"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        style="@style/text"
         android:textSize="20sp"
         android:fontFamily="@font/jakarta_semi_bold"
-        android:textColor="@color/active"
         />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Custom"
-        app:helperText="@string/required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:helperText="@string/required"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description">
 
@@ -71,13 +66,12 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailContainer"
-        app:helperText="@string/required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Custom"
+        app:helperText="@string/required"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameContainer"
         app:layout_constraintBottom_toTopOf="@+id/passwordContainer">
@@ -96,14 +90,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Custom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         app:counterEnabled="true"
         app:counterMaxLength="16"
         app:helperText="@string/required"
         app:helperTextTextColor="@android:color/holo_red_dark"
-        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailContainer"
@@ -125,17 +118,16 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/confirmPasswordContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Custom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:counterEnabled="true"
         app:counterMaxLength="16"
-        app:helperText="@string/required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordContainer"
+        app:counterEnabled="true"
+        app:helperText="@string/required"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toTopOf="@id/submitButton"
         app:passwordToggleEnabled="true">
 
@@ -180,21 +172,19 @@
 
         <TextView
             android:id="@+id/registerTile"
-            style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/signin_register_login_tile"
-            android:textColor="@color/active"
             android:textSize="15sp" />
 
         <TextView
             android:id="@+id/loginLink"
-            style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/signin_register_login_link"
-            android:textColor="@color/green"
+            android:textColor="@color/primary_dark"
             android:clickable="true"
+            android:layout_marginStart="12dp"
             android:focusable="true"
             android:textSize="15sp" />
 

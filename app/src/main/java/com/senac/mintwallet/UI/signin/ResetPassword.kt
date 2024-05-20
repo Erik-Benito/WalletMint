@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.FirebaseAuth
-import com.senac.mintwallet.UI.CustomToast.CustomToast
 import com.senac.mintwallet.R
+import com.senac.mintwallet.UI.CustomToast.CustomToast
 import com.senac.mintwallet.databinding.FragmentSigninResetPasswordBinding
 
 class ResetPassword: Fragment() {
@@ -53,6 +53,7 @@ class ResetPassword: Fragment() {
             val buttonOK = view.findViewById<Button>(R.id.btn_done)
             buttonOK.setOnClickListener {
                 dialog.dismiss()
+                findNavController().popBackStack()
             }
         }
    }

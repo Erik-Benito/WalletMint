@@ -1,16 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!--  Neutral  -->
-    <color name="green">#34B67F</color>
-    <color name="active">#9F9F9F</color>
-    <color name="inactive">#7A7A7A</color>
+    <!-- Color definitions -->
+    <color name="primary_dark">#028C78</color>
+    <color name="primary_default">#00B292</color>
+    <color name="primary_light">#D7FBED</color>
 
+    <!-- Definições de cores -->
+    <color name="accent">#FFD700</color>
 
-    <!-- Light Theme  -->
-    <color name="white">#FFFFFFFF</color>
-    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true" tools:ignore="PrivateResource">#9F9F9F</color>
-    <!-- Dark Theme  -->
-    <color name="black">#1A1C1E</color>
+    <!-- Paleta de cores primárias neutras -->
+    <color name="primary_dark900">#057F75</color>
+    <color name="primary_dark800">#0B695E</color>
+    <color name="primary_dark700">#0FA58B</color>
+    <color name="primary_dark600">#26BC78</color>
+    <color name="primary_light400">#94E7CF</color>
+    <color name="primary_light300">#B6F5AA</color>
+    <color name="primary_light200">#B9F7CA</color>
+    <color name="primary_white">#FFFFFF</color>
+
+    <!-- Cores de sucesso -->
+    <color name="success_dark">#357500</color>
+    <color name="success_default">#80D023</color>
+    <color name="success_light">#F3FCD2</color>
+    <color name="success_dark900">#355000</color>
+    <color name="success_dark800">#4C7A08</color>
+    <color name="success_dark700">#5D9711</color>
+    <color name="success_dark600">#77B819</color>
+    <color name="success_light400">#BCE45C</color>
+    <color name="success_light300">#D6F178</color>
+    <color name="success_light200">#E5FAA6</color>
+
+    <!-- Cores de erro -->
+    <color name="error_dark">#600048</color>
+    <color name="error_default">#CE3260</color>
+    <color name="error_light">#FCD7D4</color>
+    <color name="error_dark900">#600048</color>
+    <color name="error_dark800">#771D6E</color>
+    <color name="error_dark700">#9A0157</color>
+    <color name="error_dark600">#BE205C</color>
+    <color name="error_light400">#E15D7A</color>
+    <color name="error_light300">#F5A8AD</color>
+    <color name="error_light200">#FCD7D4</color>
+    <color name="error_light100">#FFE7E3</color>
+
+    <!-- Cores de aviso -->
+    <color name="warning_dark900">#7F4D06</color>
+    <color name="warning_dark800">#925312</color>
+    <color name="warning_dark700">#B2751D</color>
+    <color name="warning_dark600">#D8A52A</color>
+    <color name="warning_default">#F0A32A</color>
+    <color name="warning_light400">#F7D568</color>
+    <color name="warning_light300">#F7E5A3</color>
+    <color name="warning_light200">#FEEF80</color>
+    <color name="warning_light100">#FFF897</color>
+
+    <!-- Cores de informação -->
+    <color name="info_dark900">#00257A</color>
+    <color name="info_dark800">#1A5E92</color>
+    <color name="info_dark700">#3A6897</color>
+    <color name="info_dark600">#2B91D3</color>
+    <color name="info_default">#54A8FF</color>
+    <color name="info_light400">#77C2FF</color>
+    <color name="info_light300">#93D5FF</color>
+    <color name="info_light200">#B4E5FF</color>
+    <color name="info_light100">#DCF1F3</color>
+
+    <!-- Cores secundárias -->
+    <color name="secondary_dark900">#04070E</color>
+    <color name="secondary_dark800">#0B0B11</color>
+    <color name="secondary_dark700">#0D1015</color>
+    <color name="secondary_dark600">#131619</color>
+    <color name="secondary_default">#1A1C1E</color>
+    <color name="secondary_light400">#C7C7C8</color>
+    <color name="secondary_light300">#ACB8BB</color>
+    <color name="secondary_light200">#DCE4E8</color>
+    <color name="secondary_light100">#EDF1F3</color>
+
+    <!-- Default colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 
 </resources>

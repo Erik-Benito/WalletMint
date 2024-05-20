@@ -1,0 +1,41 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_dialog_background">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Payment"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="20dp"
+        android:text="@string/payment"
+        app:icon="@drawable/transfer"
+        app:iconSize="40dp"
+        app:iconTint="@color/color_visible"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Transef"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="50dp"
+        android:paddingVertical="20dp"
+        android:text="@string/transfer"
+        app:icon="@drawable/payment"
+        app:iconSize="40dp"
+        app:iconTint="@color/color_visible"
+        app:layout_constraintTop_toBottomOf="@+id/Payment"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

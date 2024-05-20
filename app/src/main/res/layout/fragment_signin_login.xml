@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/background"
     android:padding="25dp"
     tools:context=".UI.signin.Login"
     >
@@ -16,7 +15,6 @@
         android:text="@string/signin_login_welcome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/text"
         android:fontFamily="@font/jakarta_bold"
         android:textSize="40sp"
         android:maxWidth="250sp"
@@ -29,22 +27,21 @@
         android:text="@string/signin_login_title"
         app:layout_constraintStart_toStartOf="@+id/title"
         app:layout_constraintTop_toBottomOf="@+id/title"
-        style="@style/text"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:fontFamily="@font/jakarta_semi_bold"
-        android:textColor="@color/active"
+        android:layout_marginTop="30dp"
         />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailContainer"
-        app:helperText="@string/required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Custom"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:helperText="@string/required"
+        app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintTop_toBottomOf="@+id/description">
 
     <com.google.android.material.textfield.TextInputEditText
@@ -62,15 +59,14 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Custom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:counterEnabled="true"
         app:counterMaxLength="16"
         app:helperText="@string/required"
         app:helperTextTextColor="@android:color/holo_red_dark"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailContainer"
         app:passwordToggleEnabled="true">
@@ -82,7 +78,6 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:lines="1"
-            android:maxLength="16"
             android:paddingVertical="18dp" />
 
 
@@ -90,19 +85,17 @@
 
     <TextView
         android:id="@+id/resetPwd"
-        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/jakarta_semi_bold"
         android:text="@string/signin_login_reset_pwd"
-        android:textColor="@color/green"
         android:textSize="15sp"
+        android:textColor="@color/primary_default"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintEnd_toEndOf="@+id/passwordContainer"
         app:layout_constraintHorizontal_bias="1.0"
-
         app:layout_constraintTop_toBottomOf="@+id/passwordContainer" />
 
     <com.google.android.material.button.MaterialButton
@@ -122,11 +115,9 @@
 
     <TextView
         android:id="@+id/otherLogin"
-        style="@style/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/signin_login_other_title"
-        android:textColor="@color/active"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,26 +136,24 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/googleLoginButton"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Custom"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
             android:paddingVertical="15dp"
             android:text="@string/google"
-            android:textColor="@color/active"
             app:icon="@drawable/google"
             app:iconTint="@null" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/facebookLoginButton"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Custom"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingVertical="15dp"
             android:text="@string/facebook"
-            android:textColor="@color/active"
             app:icon="@drawable/facebook"
             app:iconTint="@null" />
     </LinearLayout>
@@ -182,21 +171,19 @@
 
         <TextView
             android:id="@+id/registerTile"
-            style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/signin_login_register_tile"
-            android:textColor="@color/active"
             android:textSize="15sp" />
 
 
         <TextView
             android:id="@+id/registerLink"
-            style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:text="@string/signin_login_register_link"
-            android:textColor="@color/green"
+            android:textColor="@color/primary_default"
             android:clickable="true"
             android:focusable="true"
             android:textSize="15sp" />

@@ -13,6 +13,10 @@
         <action
             android:id="@+id/action_main_welcome_frag_to_signin"
             app:destination="@id/signin" />
+        <action
+            android:id="@+id/action_main_welcome_frag_to_home_graph"
+            app:destination="@id/home_graph" />
     </fragment>
     <include app:graph="@navigation/main_signin" />
+    <include app:graph="@navigation/home_graph" />
 </navigation>

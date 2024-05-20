@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/background"
     >
 
     <ImageView
@@ -23,7 +22,6 @@
         android:text="@string/app_name"
         android:layout_marginBottom="40dp"
         android:textSize="24sp"
-        style="@style/text"
         android:fontFamily="@font/jakarta_extra_bold"
         />
 

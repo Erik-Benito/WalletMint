@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_login_to_resetPassword"
             app:destination="@id/resetPassword" />
+        <action
+            android:id="@+id/action_login_to_home_graph"
+            app:destination="@id/home_graph" />
     </fragment>
     <fragment
         android:id="@+id/register"
@@ -25,6 +28,9 @@
         <action
             android:id="@+id/action_register_to_login"
             app:destination="@id/login" />
+        <action
+            android:id="@+id/action_register_to_home_graph"
+            app:destination="@id/home_graph" />
     </fragment>
     <fragment
         android:id="@+id/resetPassword"
@@ -35,4 +41,5 @@
             android:id="@+id/action_resetPassword_to_login"
             app:destination="@id/login" />
     </fragment>
+    <include app:graph="@navigation/home_graph" />
 </navigation>

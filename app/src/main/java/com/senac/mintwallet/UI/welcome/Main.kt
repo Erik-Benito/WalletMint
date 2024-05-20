@@ -1,5 +1,7 @@
 package com.senac.mintwallet.UI.welcome
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
 import android.text.Html
@@ -21,6 +23,7 @@ class Main: Fragment()  {
     private val binding get() = _binding!!
 
     private var viewPagerAdapter: ViewPagerAdapter? = null
+    private lateinit var sharedPreferences: SharedPreferences
     private lateinit var dots: Array<TextView?>
 
 
@@ -48,10 +51,17 @@ class Main: Fragment()  {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        sharedPreferences = context?.getSharedPreferences(getString(R.string.pref_key), Context.MODE_PRIVATE)!!
+        val userId = sharedPreferences.getString("USER_ID", null)
+        if (userId != null) {
+            findNavController().navigate(R.id.action_main_welcome_frag_to_home_graph)
+        }
+
         val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
         val isNightMode = currentNightMode == Configuration.UI_MODE_NIGHT_YES
 
-        requireActivity().window.statusBarColor = resources.getColor(R.color.green);
+        requireActivity().window.statusBarColor = resources.getColor(R.color.primary_default);
+        requireActivity().window.navigationBarColor = resources.getColor( if(isNightMode) R.color.secondary_default else R.color.background );
 
         binding.nextButton.setOnClickListener {
             if (getItem(0) < 2) {
@@ -100,14 +110,10 @@ class Main: Fragment()  {
             dots[i] = TextView(context)
             dots[i]?.text  = Html.fromHtml("&#8226", Html.FROM_HTML_MODE_LEGACY)
             dots[i]?.textSize  = 35F
-            dots[i]?.setTextColor(
-                resources.getColor(R.color.active)
-            )
+            dots[i]?.setTextColor(resources.getColor(R.color.secondary_light200))
             binding.dotIndicator.addView(dots[i])
         }
-        dots[position]?.setTextColor(
-            resources.getColor(R.color.inactive)
-        )
+        dots[position]?.setTextColor(resources.getColor(R.color.secondary_light400))
     }
 
     private fun getItem(i: Int): Int {

@@ -1,35 +1,86 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="background">@color/black</color>
+    <color name="background_menu">@color/secondary_default</color>
+    <color name="color_visible">@color/white</color>
+
+
     <!-- Base application theme. -->
-    <style name="Base.Theme.MintWallet" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/green</item>
-        <item name="colorOnContainer">@color/active</item>
-    </style>
+    <style name="Base.Theme.MintWallet" parent="Theme.Material3.DayNight.NoActionBar"/>
+
     <style name="Theme.MintWallet" parent="Base.Theme.MintWallet" >
-        <item name="android:windowLightStatusBar">true</item>
-    </style>
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="colorPrimaryDark">@color/primary_dark900</item>
+        <item name="colorAccent">@color/accent</item>
 
-    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.Custom" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <item name="boxStrokeColor">@color/green</item>
-        <item name="hintTextColor">@color/green</item>
-        <item name="android:textColor">@color/green</item>
-    </style>
+        <!-- Background color -->
+        <item name="android:windowBackground">@color/secondary_default</item>
+        <item name="android:colorBackground">@color/secondary_default</item>
 
-    <style name="background">
-        <item name="android:background">@color/black</item>
-    </style>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/primary_white</item>
+        <item name="android:textColorSecondary">@color/secondary_light300</item>
 
-    <style name="text" >
-        <item name="colorPrimary">@color/white</item>
-        <item name="android:textColor">@color/white</item>
+        <!-- Button colors -->
+        <item name="colorButtonNormal">@color/primary_default</item>
+        <item name="android:colorButtonNormal">@color/primary_default</item>
+
+        <!-- Error colors -->
+        <item name="colorError">@color/error_default</item>
         <item name="android:fontFamily">@font/jakarta_regular</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="Widget.Button.Primary" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/primary_default</item>
+        <item name="android:textColor">@color/primary_white</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="Widget.Button.Accent" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/accent</item>
+        <item name="android:textColor">@color/primary_white</item>
+    </style>
+
+    <!-- EditText styles -->
+    <style name="Widget.EditText.Primary" parent="Widget.AppCompat.EditText">
+        <item name="android:backgroundTint">@color/secondary_dark700</item>
+        <item name="android:textColor">@color/primary_white</item>
+        <item name="hintTextColor">@color/secondary_light300</item>
+    </style>
+
+    <!-- Toolbar styles -->
+    <style name="Widget.Toolbar.Primary" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/primary_dark</item>
+        <item name="android:titleTextColor">@color/primary_white</item>
+        <item name="android:subtitleTextColor">@color/primary_light200</item>
+    </style>
+
+    <!-- Menu style -->
+    <style name="CustomBottomNavigationView" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_default</item>
+        <item name="colorPrimaryDark">@color/secondary_dark700</item>
     </style>
 
     <style name="button" parent="Widget.Material3.Button.ElevatedButton">
         <item name="android:textAllCaps">true</item>
-        <item name="cornerRadius">8dp</item>
+        <item name="cornerRadius">50dp</item>
         <item name="android:background">@drawable/button_bg</item>
-        <item name="backgroundTint">@color/green</item>
+        <item name="backgroundTint">@color/primary_default</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:fontFamily">@font/jakarta_semi_bold</item>
+    </style>
+
+    <!-- Material Components Button style -->
+    <style name="Widget.MaterialComponents.Button.OutlinedButton.Custom" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/primary_white</item>
+        <item name="android:fontFamily">@font/jakarta_semi_bold</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.TextButton.Custom" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/primary_white</item>
+        <item name="hintTextColor">@color/secondary_light300</item>
     </style>
 </resources>

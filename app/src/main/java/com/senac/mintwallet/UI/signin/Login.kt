@@ -1,8 +1,9 @@
 package com.senac.mintwallet.UI.signin
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,15 +25,18 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import com.senac.mintwallet.UI.CustomToast.CustomToast
 import com.senac.mintwallet.R
+import com.senac.mintwallet.UI.CustomToast.CustomToast
 import com.senac.mintwallet.databinding.FragmentSigninLoginBinding
+import com.senac.mintwallet.model.Repository
+
 
 class Login: Fragment() {
     private var _binding: FragmentSigninLoginBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var sharedPreferences: SharedPreferences
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var facebookCallbackManager: CallbackManager
 
@@ -45,12 +49,10 @@ class Login: Fragment() {
             if (result.resultCode == Activity.RESULT_OK) {
                 val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
                 try {
-                    // Google Sign In was successful, authenticate with Firebase
                     val account = task.getResult(ApiException::class.java)!!
                     firebaseAuthWithGoogle(account)
                 } catch (e: ApiException) {
-                    // Google Sign In failed, update UI appropriately
-                    CustomToast.showToast(this.requireContext(), "Google Sign In failed: ${e.statusCode}", false)
+                    CustomToast.showToast(this.requireContext(), getString(R.string.unhandlerError), false)
                 }
             }
         }
@@ -75,11 +77,10 @@ class Login: Fragment() {
         auth = FirebaseAuth.getInstance()
         googleSignInClient = GoogleSignIn.getClient(requireContext(), googleSignInOptions)
         facebookCallbackManager = CallbackManager.Factory.create()
+        sharedPreferences = context?.getSharedPreferences(getString(R.string.pref_key), Context.MODE_PRIVATE)!!
 
-        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-        val isNightMode = currentNightMode == Configuration.UI_MODE_NIGHT_YES
-
-        requireActivity().window.statusBarColor = resources.getColor( if(isNightMode) R.color.black else R.color.white );
+        requireActivity().window.statusBarColor = resources.getColor(R.color.background);
+        requireActivity().window.navigationBarColor = resources.getColor(R.color.background);
 
         initListeners()
     }
@@ -110,10 +111,17 @@ class Login: Fragment() {
         }
     }
 
+    private fun saveUserId(userId: String?) {
+        with(sharedPreferences.edit()) {
+            putString("USER_ID", userId)
+            apply()
+        }
+    }
     private fun login(email: String, password: String) {
         this.auth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
             if(task.isSuccessful) {
-                // TODO(REDIRECIONAR PARA PAGINA PADRÃO)
+                saveUserId(auth.currentUser?.uid)
+                findNavController().navigate(R.id.action_login_to_home_graph)
             } else {
                 CustomToast.showToast(this.requireContext(), "Usuário ou Senha inválidos", false)
             }
@@ -129,14 +137,18 @@ class Login: Fragment() {
         val credential = GoogleAuthProvider.getCredential(acct.idToken, null)
         auth.signInWithCredential(credential)
             .addOnCompleteListener(requireActivity()) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    val user = auth.currentUser
-                    CustomToast.showToast(this.requireContext(), "Authentication successful.",false)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    CustomToast.showToast(this.requireContext(), "Authentication failed.", false)
+                if (
+                    !task.isSuccessful ||
+                    auth.currentUser?.email == null ||
+                    auth.currentUser?.displayName == null
+                ) {
+                    CustomToast.showToast(this.requireContext(), getString(R.string.unhandlerError), false)
+                    return@addOnCompleteListener
                 }
+
+               saveUserId(auth.currentUser?.uid)
+               Repository().create(auth.currentUser?.email, auth.currentUser?.displayName)
+               findNavController().navigate(R.id.action_login_to_home_graph)
             }
     }
 
@@ -148,14 +160,10 @@ class Login: Fragment() {
                     handleFacebookAccessToken(result.accessToken)
                 }
 
-                override fun onCancel() {
-                    // User canceled login
-                    CustomToast.showToast(requireContext(), "Facebook login canceled", false)
-                }
+                override fun onCancel() {}
 
                 override fun onError(error: FacebookException) {
-                    // Handle error
-                    CustomToast.showToast(requireContext(), "Facebook login error: ${error.message}", false)
+                    CustomToast.showToast(requireContext(), getString(R.string.unhandlerError), false)
                 }
             })
     }
@@ -170,14 +178,17 @@ class Login: Fragment() {
         val credential = FacebookAuthProvider.getCredential(token?.token!!)
         auth.signInWithCredential(credential)
             .addOnCompleteListener(requireActivity()) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    val user = auth.currentUser
-                    CustomToast.showToast(requireContext(), "Authentication successful.", false)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    CustomToast.showToast(requireContext(), "Authentication failed.", false)
+                if (
+                    !task.isSuccessful ||
+                    auth.currentUser?.email == null ||
+                    auth.currentUser?.displayName == null
+                ) {
+                    CustomToast.showToast(this.requireContext(), getString(R.string.unhandlerError), false)
+                    return@addOnCompleteListener
                 }
+                saveUserId(auth.currentUser?.uid)
+                Repository().create(auth.currentUser?.email, auth.currentUser?.displayName)
+                findNavController().navigate(R.id.action_login_to_home_graph)
             }
     }
 }

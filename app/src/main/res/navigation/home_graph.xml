@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/menu_home"
+    android:id="@+id/home_graph">
+
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.senac.mintwallet.UI.app.home.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_menu_home_to_newTransfer2"
+            app:destination="@id/newTransfer2" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerNewTransfer2"
+        android:name="com.senac.mintwallet.UI.app.home.RegisterNewTransfer"
+        android:label="fragment_register_new_transfer"
+        tools:layout="@layout/fragment_register_new_transfer" >
+        <argument
+            android:name="transfer"
+            app:argType="com.senac.mintwallet.model.TransferEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTransfer2"
+        android:name="com.senac.mintwallet.UI.app.home.NewTransfer"
+        android:label="fragment_new_transfer"
+        tools:layout="@layout/fragment_new_transfer" >
+        <action
+            android:id="@+id/action_newTransfer2_to_registerNewTransfer2"
+            app:destination="@id/registerNewTransfer2" />
+        <argument
+            android:name="typeTransfer"
+            app:argType="com.senac.mintwallet.model.ETypeTransfer" />
+    </fragment>
+</navigation>

@@ -2,10 +2,10 @@ package com.senac.mintwallet.UI.welcome
 
 import android.content.res.Configuration
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.senac.mintwallet.R
 import com.senac.mintwallet.databinding.FragmentWelcomeComponentBinding
 
@@ -29,7 +29,7 @@ class Component : Fragment() {
         val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
         val isNightMode = currentNightMode == Configuration.UI_MODE_NIGHT_YES
 
-        requireActivity().window.statusBarColor = resources.getColor(R.color.green);
+        requireActivity().window.statusBarColor = resources.getColor(R.color.primary_default);
     }
 
     override fun onDestroyView() {

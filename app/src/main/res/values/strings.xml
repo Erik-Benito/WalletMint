@@ -36,20 +36,47 @@
     <string name="full_name">Nome Completo</string>
     <string name="confirm_password">Confirme sua senha</string>
     <string name="signin_register_resetpwd_title">Esqueceu sua senha?</string>
-    <string name="signin_register_resetpwd_description">Enviaremos um e-mail com instrućões de como redefinir sua senha.</string>
-    <string name="signin_reset_imagem_icon_desc">flecha indicando općão de retornar a pagina anterior</string>
+    <string name="signin_register_resetpwd_description">Enviaremos um e-mail com instruções de como redefinir sua senha.</string>
+    <string name="signin_reset_imagem_icon_desc">flecha indicando opção de retornar a pagina anterior</string>
     <string name="register">Cadastrar-se</string>
     <string name="send">enviar</string>
     <string name="Done">Feito</string>
     <string name="check_email">Verifique seu e-mail</string>
     <string name="icon_mensagem">icone de mensagem\n</string>
+    <string name="icon">icone</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
-
+    <string name="payment">Pagamento</string>
+    <string name="transfer">Transferencia</string>
+    <string name="unhandlerError">Ops… Parece que algo não funcionou! Tente novamente mais tarde</string>
+    <string name="SendEmailConfirm">Por favor, verifique sua caixa de entrada e siga as instruções.</string>
+    <string name="email_already_in_use">Email já em uso</string>
+    <string name="invalid_email">Email informado não é valido</string>
+    <string name="weak_password">A senha deve conter 6 caracteres </string>
     <string name="id_web_client">290619583090-f6v586a51ico6eed5vh8voshbercof22.apps.googleusercontent.com</string>
-
-
+    <string name="pref_key">USER_TOKEN</string>
     <string name="facebook_app_id">1096818451429750</string>
     <string name="fb_login_protocol_scheme">fb1234</string>
     <string name="facebook_client_token">39232bbc3d586647e58b739e7a6de7d0</string>
+    <string name="message_amount_required">O valor movimentado deve ser preenchido</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_bottom_home">Home</string>
+    <string name="menu_bottom_analytics">Análise</string>
+    <string name="menu_bottom_target">Objetivos</string>
+    <string name="menu_bottom_settings">Config.</string>
+    <string name="title_new_transfer">Registrar movimentação</string>
+    <string name="title_enter_amount">Digite o valor</string>
+    <string name="register_next">Registrar</string>
+    <string name="prefix_amount">R$</string>
+    <string name="describe_amount">Descrição</string>
+    <string name="checkmark">Checkmark</string>
+    <string name="send_money_successfully">Transação monetário registrada!</string>
+    <string name="id_transaction">Id da Transação</string>
+    <string name="target_title">Escolha qual será sua nova meta</string>
+    <string name="description_target">Escolha o ícones para descrever seus objetivos</string>
+    <string name="house">Casa</string>
+    <string name="icon_vacation">Férias</string>
+    <string name="vacation">Férias</string>
+
 </resources>
