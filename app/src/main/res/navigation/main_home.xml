@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_home"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/goal"
+        android:name="com.senac.mintwallet.ui.home.goal.Goal" />
+    <fragment
+        android:id="@+id/registerNewTransfer"
+        android:name="com.senac.mintwallet.ui.home.home.RegisterNewTransfer"
+        android:label="fragment_register_new_transfer"
+        tools:layout="@layout/fragment_register_new_transfer">
+        <argument
+            android:name="transfer"
+            app:argType="com.senac.mintwallet.model.TransferEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTransfer"
+        android:name="com.senac.mintwallet.ui.home.home.NewTransfer"
+        android:label="fragment_new_transfer"
+        tools:layout="@layout/fragment_new_transfer">
+        <action
+            android:id="@+id/action_newTransfer_to_registerNewTransfer"
+            app:destination="@id/registerNewTransfer" />
+        <argument
+            android:name="typeTransfer"
+            app:argType="com.senac.mintwallet.model.ETypeTransfer" />
+    </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="com.senac.mintwallet.ui.home.home.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_home_to_new_transfer"
+            app:destination="@id/newTransfer" />
+        <action
+            android:id="@+id/action_home_to_goal"
+            app:destination="@id/goal" />
+    </fragment>
+    <include app:graph="@navigation/nav_home" />
+</navigation>

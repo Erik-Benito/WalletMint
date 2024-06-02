@@ -29,6 +29,8 @@
     <string name="signin_login_other_title">Entre com</string>
     <string name="signin_login_register_tile">Não possui conta ?</string>
     <string name="signin_login_register_link"> Cadastrar-se</string>
+    <string name="goal_title">Metas</string>
+    <string name="settings_title">configurações</string>
     <string name="signin_register_title">Cadastrar-se</string>
     <string name="signin_register_description">Crie sua conta</string>
     <string name="signin_register_login_tile">Já possui conta?</string>
@@ -59,11 +61,12 @@
     <string name="fb_login_protocol_scheme">fb1234</string>
     <string name="facebook_client_token">39232bbc3d586647e58b739e7a6de7d0</string>
     <string name="message_amount_required">O valor movimentado deve ser preenchido</string>
+    <string name="message_targer_required">O prazo final deve ser escolhido</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_bottom_home">Home</string>
     <string name="menu_bottom_analytics">Análise</string>
-    <string name="menu_bottom_target">Objetivos</string>
+    <string name="menu_bottom_target">Metas</string>
     <string name="menu_bottom_settings">Config.</string>
     <string name="title_new_transfer">Registrar movimentação</string>
     <string name="title_enter_amount">Digite o valor</string>
@@ -78,5 +81,37 @@
     <string name="house">Casa</string>
     <string name="icon_vacation">Férias</string>
     <string name="vacation">Férias</string>
-
+    <string name="more">mais</string>
+    <string name="title_activity_home">home</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Monthly">Mensal</string>
+    <string name="recent_transactions">Transações recentes</string>
+    <string name="money_income">Renda monetária</string>
+    <string name="spread">Gastos</string>
+    <string name="set_your_goal">Defina sua meta</string>
+    <string name="icons_describe_goals">Escolha o ícones para descrever seus objetivos</string>
+    <string name="target_saving">Valor mensal a ser guardado</string>
+    <string name="targets_achieve">Valor para se alcançar a metas</string>
+    <string name="target_achieved">Prazo final</string>
+    <string name="description_target_a">Quando a meta pode ser alcançada</string>
+    <string name="target">Prazo</string>
+    <string name="confirm">Confirme a criaćão da nova meta</string>
+    <string name="Goal">Meta</string>
+    <string name="target_motivation">Será usado como base o valor do CDI informado por Banco Central do Brasil</string>
+    <string name="send_new_goal">Nova meta cadastrada</string>
+    <string name="signout">Sair da sua conta</string>
+    <string name="saving_plans">Saving Plans</string>
+    <string name="my_saving_plans">Minhas metas</string>
+    <string name="add">Add</string>
+    <string name="new_car">New Car</string>
+    <string name="new_home">New Home</string>
+    <string name="new_cloth">New Cloth</string>
+    <string name="marriage_plan">Marriage Plan</string>
+    <string name="parent">Parent</string>
+    <string name="price">$5,000.00</string>
+    <string name="leading_icon">Leading Icon</string>
+    <string name="trailing_icon">Trailing Icon</string>
+    <string name="create_goal">Nova Meta</string>
 </resources>

@@ -9,7 +9,7 @@
         android:icon="@drawable/analytics_selector"
         android:title="@string/menu_bottom_analytics"/>
     <item
-        android:id="@+id/placeholder"
+        android:id="@+id/menu_new_transfer"
         android:title=""
         android:enabled="false"
         />

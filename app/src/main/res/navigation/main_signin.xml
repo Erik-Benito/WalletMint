@@ -2,12 +2,30 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/signin"
-    app:startDestination="@id/login">
+    android:id="@+id/main_signin"
+    app:startDestination="@id/splash">
 
     <fragment
+        android:id="@+id/splash"
+        android:name="com.senac.mintwallet.ui.Splash"
+        android:label="Splash">
+
+        <action
+            android:id="@+id/action_splash_to_main_welcome_frag"
+            app:destination="@id/main_welcome_frag" />
+    </fragment>
+    <fragment
+        android:id="@+id/main_welcome_frag"
+        android:name="com.senac.mintwallet.ui.signin.welcome.Main"
+        android:label="stepOne"
+        tools:layout="@layout/fragment_welcome_main">
+        <action
+            android:id="@+id/action_main_welcome_frag_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
         android:id="@+id/login"
-        android:name="com.senac.mintwallet.UI.signin.Login"
+        android:name="com.senac.mintwallet.ui.signin.Login"
         android:label="fragment_signin_login"
         tools:layout="@layout/fragment_signin_login" >
         <action
@@ -16,30 +34,23 @@
         <action
             android:id="@+id/action_login_to_resetPassword"
             app:destination="@id/resetPassword" />
-        <action
-            android:id="@+id/action_login_to_home_graph"
-            app:destination="@id/home_graph" />
     </fragment>
     <fragment
         android:id="@+id/register"
-        android:name="com.senac.mintwallet.UI.signin.Register"
+        android:name="com.senac.mintwallet.ui.signin.Register"
         android:label="fragment_signin_register"
         tools:layout="@layout/fragment_signin_register" >
         <action
             android:id="@+id/action_register_to_login"
             app:destination="@id/login" />
-        <action
-            android:id="@+id/action_register_to_home_graph"
-            app:destination="@id/home_graph" />
     </fragment>
     <fragment
         android:id="@+id/resetPassword"
-        android:name="com.senac.mintwallet.UI.signin.ResetPassword"
+        android:name="com.senac.mintwallet.ui.signin.ResetPassword"
         android:label="fragment_signin_reset_password"
         tools:layout="@layout/fragment_signin_reset_password" >
         <action
             android:id="@+id/action_resetPassword_to_login"
             app:destination="@id/login" />
     </fragment>
-    <include app:graph="@navigation/home_graph" />
 </navigation>

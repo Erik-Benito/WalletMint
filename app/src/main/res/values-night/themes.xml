@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <color name="background">@color/black</color>
-    <color name="background_menu">@color/secondary_default</color>
+    <color name="background">@color/secondary_default</color>
+    <color name="background_menu">@color/secondary_dark600</color>
     <color name="color_visible">@color/white</color>
 
 

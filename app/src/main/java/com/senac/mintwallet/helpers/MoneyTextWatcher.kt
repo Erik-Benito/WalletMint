@@ -14,15 +14,16 @@ class MoneyTextWatcher(private val editText: EditText) : TextWatcher {
     private val decimalSeparator = decimalFormatSymbols.decimalSeparator.toString()
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-        // Não é necessário fazer nada aqui
+
     }
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-        // Não é necessário fazer nada aqui
+
     }
 
     override fun afterTextChanged(s: Editable?) {
         editText.removeTextChangedListener(this)
+
 
         val cleanString = s.toString().replace("[,.]".toRegex(), "")
         val parsed: Double = try {

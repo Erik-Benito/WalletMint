@@ -17,7 +17,8 @@ class Repository {
             val userData = UserEntity(
                 name = name,
                 email = email,
-                transfers = null
+                transfers = null,
+                goal = null,
             )
             userIdReference.setValue(userData)
         }
@@ -38,6 +39,22 @@ class Repository {
         transferEntity.uuid = transfer.key
 
         return transferEntity
+    }
+
+    public fun createNewGoal(goalEntity: GoalEntity): GoalEntity {
+        val databaseReference: DatabaseReference = FirebaseDatabase
+            .getInstance()
+            .getReference("users")
+            .child(user!!.uid)
+            .child("goals")
+
+        val goal = databaseReference.push()
+        goal.setValue(goalEntity)
+
+        this.user = FirebaseAuth.getInstance().currentUser
+        goalEntity.uuid = goal.key
+
+        return goalEntity
     }
 
 }

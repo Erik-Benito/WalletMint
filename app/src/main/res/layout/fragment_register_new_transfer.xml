@@ -4,18 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.app.home.RegisterNewTransfer"
+    tools:context=".ui.home.home.RegisterNewTransfer"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_confet"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:background="@drawable/confet_icon"
+        android:background="@drawable/confetti"
         app:layout_constraintTop_toTopOf="parent">
-        <!-- Checkmark icon -->
 
-        <!-- Success message -->
         <ImageView
             android:id="@+id/checkmarkIcon"
             android:layout_width="130dp"
@@ -44,10 +42,6 @@
             app:layout_constraintVertical_bias="0.245" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Transaction details -->
-
-    <!-- Transaction ID and Date & Time -->
 
     <LinearLayout
         android:id="@+id/transactionDetails"
@@ -119,7 +113,6 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <!-- Done Button -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/submitButton"
         style="@style/button"

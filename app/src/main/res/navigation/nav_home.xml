@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/menu_home">
+
+    <fragment
+        android:id="@+id/menu_settings"
+        android:name="com.senac.mintwallet.ui.home.settings.Settings" />
+    <fragment
+        android:id="@+id/menu_analytics"
+        android:name="com.senac.mintwallet.ui.home.analytics.Analytics"
+        />
+    <fragment
+        android:id="@+id/choice_goal"
+        android:name="com.senac.mintwallet.ui.home.goal.Goal"
+        android:label="fragment_goal"
+        tools:layout="@layout/fragment_goal" >
+        <action
+            android:id="@+id/action_menu_goal_to_goalAmountStep"
+            app:destination="@id/goalAmountStep" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalAmountStep"
+        android:name="com.senac.mintwallet.ui.home.goal.GoalAmountStep"
+        android:label="GoalAmountStep" >
+        <action
+            android:id="@+id/action_goalAmountStep_to_goalTarget"
+            app:destination="@id/goalTarget" />
+        <argument
+            android:name="goal"
+            app:argType="com.senac.mintwallet.model.GoalEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalTarget"
+        android:name="com.senac.mintwallet.ui.home.goal.GoalTarget"
+        android:label="GoalTarget" >
+        <action
+            android:id="@+id/action_goalTarget_to_goalConfirm"
+            app:destination="@id/goalConfirm" />
+        <argument
+            android:name="goal"
+            app:argType="com.senac.mintwallet.model.GoalEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalConfirm"
+        android:name="com.senac.mintwallet.ui.home.goal.GoalConfirm"
+        android:label="GoalConfirm" >
+        <action
+            android:id="@+id/action_goalConfirm_to_goalRegister"
+            app:destination="@id/goalRegister" />
+        <argument
+            android:name="goal"
+            app:argType="com.senac.mintwallet.model.GoalEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalRegister"
+        android:name="com.senac.mintwallet.ui.home.goal.GoalRegister"
+        android:label="GoalRegister" >
+        <action
+            android:id="@+id/action_goalRegister_to_menu_goal"
+            app:destination="@id/menu_goal" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_home"
+        android:name="com.senac.mintwallet.ui.home.HomeMenu"
+        android:label="fragment_home_menu"
+        tools:layout="@layout/fragment_home_menu" />
+    <fragment
+        android:id="@+id/menu_goal"
+        android:name="com.senac.mintwallet.ui.home.goal.GoalList"
+        android:label="fragment_goal_list"
+        tools:layout="@layout/fragment_goal_list" >
+        <action
+            android:id="@+id/action_menu_goal_to_choice_goal"
+            app:destination="@id/choice_goal" />
+    </fragment>
+</navigation>

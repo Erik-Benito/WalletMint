@@ -8,6 +8,9 @@ plugins {
 
     // KSP
     id("com.google.devtools.ksp") version "1.9.21-1.0.15" apply false
+
+    kotlin("jvm") version "1.7.10"
+    kotlin("plugin.serialization") version "1.7.10"
 }
 
 buildscript {

@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.app.home.NewTransfer"
+    tools:context=".ui.home.home.NewTransfer"
     android:padding="16dp">
 
-    <!-- Back button and Title -->
     <ImageView
         android:id="@+id/backButton"
         android:layout_width="24dp"
@@ -31,7 +30,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <!-- Enter Amount -->
     <TextView
         android:id="@+id/enterAmountLabel"
         android:layout_width="wrap_content"
@@ -49,7 +47,7 @@
         android:id="@+id/enterDescribe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/jakarta_semi_bold"
         android:text="@string/describe_amount"
         android:textSize="18sp"
